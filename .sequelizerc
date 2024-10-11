@@ -1,0 +1,11 @@
+const path = require('path');
+require('dotenv').config();
+
+console.log(process.env.DB_HOST, process.env.DB_NAME, process.env.DB_PORT);
+
+module.exports = {
+  'models-path': path.resolve('database-setup/models'),
+  'migrations-path': path.resolve('database-setup/migrations'),
+  'seeders-path': path.resolve('database-setup/seeders'),
+  config: path.resolve('database-setup/config/config.json'),
+};

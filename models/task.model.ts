@@ -18,7 +18,7 @@ export class Task extends Model<Task> {
 
   @ForeignKey(() => User)
   @Column
-  userId: number;
+  userId: string;
 
   @BelongsTo(() => User)
   user: User;

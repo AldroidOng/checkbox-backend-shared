@@ -12,8 +12,8 @@ import * as Joi from 'joi';
       validationSchema: Joi.object({
         DB_HOST: Joi.string().required(),
         DB_PORT: Joi.string().required(),
-        DB_USERNAME: Joi.string().required(),
-        DB_PASSWORD: Joi.string().required(),
+        DB_USERNAME: Joi.string(),
+        DB_PASSWORD: Joi.string(),
         DB_NAME: Joi.string().required(),
         TASK_MANAGEMENT_MICROSERVICE_HOST: Joi.string().default('localhost'),
         TASK_MANAGEMENT_MICROSERVICE_PORT: Joi.number().default(3001),

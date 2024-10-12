@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule } from '../index';
-import { User } from 'models/user.model';
-import { Task } from 'models/task.model';
+import { Task } from '../models/task.model';
+import { User } from '../models/user.model';
 
 @Module({
   imports: [

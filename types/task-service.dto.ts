@@ -8,12 +8,14 @@ export interface GetTaskPayload {
   email: string;
 }
 
-export interface GetTaskResp {
+export interface GetTaskRespSuccess {
   taskName: string;
   taskDescription: string;
   dueDate: string;
   createdAt: string;
 }
+
+export type GetTaskResp = GetTaskRespSuccess[] | ErrorResponse;
 
 export interface CreateTaskPayload{
   email: string;
@@ -22,6 +24,8 @@ export interface CreateTaskPayload{
   dueDate: string;
 }
 
-export interface CreateTaskResp{
- taskId: string;
+export interface CreateTaskRespSuccess{
+  taskId: string;
 }
+
+export type CreateTaskResp = CreateTaskRespSuccess | ErrorResponse;

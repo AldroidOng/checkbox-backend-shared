@@ -9,7 +9,8 @@ export interface GetTaskResp {
   createdAt: string;
 }
 
-export interface ErrorResponse{
+export interface ErrorResponse {
   statusCode: number;
   message: string;
+  error?: string;
 }

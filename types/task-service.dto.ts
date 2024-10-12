@@ -1,10 +1,15 @@
-export class GetTaskPayload {
+export interface GetTaskPayload {
   email: string;
 }
 
-export class GetTaskResp {
+export interface GetTaskResp {
   taskName: string;
   taskDescription: string;
-  dueDate: Date;
-  createdAt: Date;
+  dueDate: string;
+  createdAt: string;
+}
+
+export interface ErrorResponse{
+  statusCode: number;
+  message: string;
 }

@@ -1,3 +1,9 @@
+export interface ErrorResponse {
+  statusCode: number;
+  message: string;
+  error?: string;
+}
+
 export interface GetTaskPayload {
   email: string;
 }
@@ -9,8 +15,13 @@ export interface GetTaskResp {
   createdAt: string;
 }
 
-export interface ErrorResponse {
-  statusCode: number;
-  message: string;
-  error?: string;
+export interface CreateTaskPayload{
+  email: string;
+  taskName: string;
+  taskDesc: string;
+  dueDate: string;
+}
+
+export interface CreateTaskResp{
+ taskId: string;
 }

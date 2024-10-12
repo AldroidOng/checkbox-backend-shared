@@ -9,7 +9,7 @@ import {
 } from 'sequelize-typescript';
 import { User } from './user.model';
 
-@Table
+@Table({ tableName: 'tasks' })
 export class Task extends Model<Task> {
   @PrimaryKey
   @AutoIncrement
@@ -31,7 +31,4 @@ export class Task extends Model<Task> {
 
   @Column({ type: 'date', allowNull: true })
   dueDate: Date;
-
-  @Column({ type: 'timestamp', defaultValue: new Date() })
-  createDate: Date;
 }

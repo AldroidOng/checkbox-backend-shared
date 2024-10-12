@@ -8,7 +8,7 @@ import {
 } from 'sequelize-typescript';
 import { Task } from './task.model';
 
-@Table
+@Table({ tableName: 'users' })
 export class User extends Model<User> {
   @PrimaryKey
   @Column({

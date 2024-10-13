@@ -22,6 +22,6 @@ import * as Joi from 'joi';
     }),
   ],
   providers: [ConfigService],
-  exports: [NestConfigModule, ConfigService], // Ensure both are exported
+  exports: [NestConfigModule, ConfigService],
 })
 export class ConfigModule {}

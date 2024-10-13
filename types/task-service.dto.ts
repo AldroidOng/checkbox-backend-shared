@@ -38,6 +38,14 @@ export enum TaskStatus {
   OVERDUE = 'Overdue',
 }
 
+export interface UpdateTaskPayload {
+  email: string;
+  taskId: string;
+  taskName: string;
+  taskDesc: string;
+  dueDate: string;
+}
+
 export interface UpdateTaskRespSuccess {
   taskId: string;
 }

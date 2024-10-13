@@ -13,6 +13,7 @@ export interface GetTaskRespSuccess {
   taskDescription: string;
   dueDate: string;
   createdAt: string;
+  status: TaskStatus;
 }
 
 export type GetTaskResp = GetTaskRespSuccess[] | ErrorResponse;
@@ -29,3 +30,9 @@ export interface CreateTaskRespSuccess{
 }
 
 export type CreateTaskResp = CreateTaskRespSuccess | ErrorResponse;
+
+export enum TaskStatus {
+  NOT_URGENT = 'Not urgent',
+  DUE_SOON = 'Due soon',
+  OVERDUE = 'Overdue'
+}

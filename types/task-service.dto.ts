@@ -9,6 +9,7 @@ export interface GetTaskPayload {
 }
 
 export interface GetTaskRespSuccess {
+  taskId: string;
   taskName: string;
   taskDescription: string;
   dueDate: string;

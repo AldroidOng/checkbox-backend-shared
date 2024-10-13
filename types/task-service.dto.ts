@@ -37,3 +37,9 @@ export enum TaskStatus {
   DUE_SOON = 'Due soon',
   OVERDUE = 'Overdue',
 }
+
+export interface UpdateTaskRespSuccess {
+  taskId: string;
+}
+
+export type UpdateTaskResp = UpdateTaskRespSuccess | ErrorResponse;

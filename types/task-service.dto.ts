@@ -9,6 +9,7 @@ export interface GetTaskPayload {
 }
 
 export interface GetTaskRespSuccess {
+  taskId: string;
   taskName: string;
   taskDescription: string;
   dueDate: string;
@@ -18,14 +19,14 @@ export interface GetTaskRespSuccess {
 
 export type GetTaskResp = GetTaskRespSuccess[] | ErrorResponse;
 
-export interface CreateTaskPayload{
+export interface CreateTaskPayload {
   email: string;
   taskName: string;
   taskDesc: string;
   dueDate: string;
 }
 
-export interface CreateTaskRespSuccess{
+export interface CreateTaskRespSuccess {
   taskId: string;
 }
 
@@ -34,5 +35,5 @@ export type CreateTaskResp = CreateTaskRespSuccess | ErrorResponse;
 export enum TaskStatus {
   NOT_URGENT = 'Not urgent',
   DUE_SOON = 'Due soon',
-  OVERDUE = 'Overdue'
+  OVERDUE = 'Overdue',
 }

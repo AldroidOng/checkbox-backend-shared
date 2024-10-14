@@ -4,5 +4,13 @@
     "host": "localhost",
     "port": 5432,
     "database": "task_management"
+  },
+  "production": {
+    "dialect": "postgres",
+    "username": "username",
+    "password": "password",
+    "host": "backend_stack_postgres",
+    "port": 5432,
+    "database": "task_management"
   }
 }
